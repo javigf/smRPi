@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Success"
+cat /var/log/dht.log | grep "Success :3" | wc -l
+echo "Reading"
+cat /var/log/dht.log | grep "Reading" | wc -l
+echo "Out of Range"
+cat /var/log/dht.log | grep "out of range" | wc -l
+

@@ -1,0 +1,42 @@
+php-mcrypt - php-pdo - php-mysql
+ Para el correcto funcionamiento de la app (con o sin ABM) En la RPi tenes que instalar un Apache 2.x, PHP 5.5 o 5.6, y MySql 5.x, yo trabajo con la 5.6.
+
+vi /etc/network/interfaces
+
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.100.114
+broadcast 192.168.100.255
+netmask 255.255.255.0
+network 192.168.100.0
+gateway 192.168.100.1
+
+/etc/init.d/networking restart
+
+apt-get install sudo
+apt-get update
+apt-get install firmware-brcm80211 pi-bluetooth wpasupplicant
+apt-get upgrade
+
+apt-get install php5
+apt-get install raspi-config
+apt-get install htop
+apt-get install vim
+
+
+
+apt-get install build-essential debhelper devscripts debian-keyring
+
+
+ To compile programs with wiringPi, you need to add:
+    -lwiringPi
+  to your compile line(s) To use the Gertboard, MaxDetect, etc.
+  code (the devLib), you need to also add:
+    -lwiringPiDev
+  to your compile line(s).
+
+
+

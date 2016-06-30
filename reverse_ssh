@@ -1,0 +1,2 @@
+ ssh -fN -R 10022:localhost:22 root@63.141.250.175 
+
