@@ -106,10 +106,12 @@ int db_insert (short type, short id, float reading){
 
 	//If you want to get the number of affected rows
 	//long affected_rows = mysql_stmt_affected_rows(sql_statement1);
-	//if (affected_rows != 1)
-	//{
-	//	do something
-	//}
+
+	/*if (affected_rows != 1)
+	{
+		do something
+	}*/
+
 	//fprintf (stderr,"Affected Rows %d \n", affected_rows); 
 	//fprintf (stderr, "INSERT STMT: %s \n", sql_statement1);
 	//IF YOU WANT TO GET THE VALUE GENERATED FOR AN AUTO_INCREMENT COLUMN IN THE PREVIOUS INSERT/UPDATE STATEMENT

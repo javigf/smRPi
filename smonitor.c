@@ -22,13 +22,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #define SMART_MONITOR_VER 	0.1
-#define MAXPORTS 			28
-#define MAX_ERRORS 			15
+#define MAXPORTS 		28
+#define MAX_ERRORS 		15
 
 unsigned int reading 		= 0;
 unsigned int success 		= 0;
-float volts 				= 220;
-float humo 					= 20;
+float volts 			= 220;
+float humo 			= 20;
 
 #define PIN_AC 24		// PIN uSADO PARA TENSiON
 #define PIN_SMK1 21		// PIN uSADO PARA HUMO1
@@ -42,7 +42,7 @@ float humo 					= 20;
 FILE *fr;
 
 //unsigned int availablePorts [MAXPORTS]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,
-//										15,16,21,22,23,24,25,26,27,28,29,30,31};
+//					15,16,21,22,23,24,25,26,27,28,29,30,31};
 // Ports 12, 13, 14 ,8 , 9 son I2C-SPI pueden traer conflictos, no los uso
 // Ports 15, 16 son UART y no los uso
 // Ports 0, 10, 11 , +28 disponibles para extensiones
@@ -371,17 +371,18 @@ inline int insertValues (void){
 		db_update (2,0,0);
 		
 		if (!digitalRead (PIN_SMK1))	
-			humo = 70;
+			humo = 71;
 		
 		db_insert (6,0,humo);
 		db_update (6,0,0);
 		humo = 20;
 		
 		if (!digitalRead (PIN_SMK2))
-			humo = 70;
+			humo = 71;
 		
 		db_insert (6,1,humo);
 		db_update (6,1,0);
+		humo = 20;
 
 		for (int i=0 ; i<size; i++){
 			
